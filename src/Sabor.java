@@ -1,4 +1,5 @@
-public enum Sabor {
+public enum Sabor
+{
   Calabresa,
   Bacon,
   Portuguesa,

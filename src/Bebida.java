@@ -1,8 +1,11 @@
-public class Bebida {
+public class Bebida
+{
   private String nome;
 
-  public Bebida(String nome) {
-    switch (nome) {
+  public Bebida(String nome)
+  {
+    switch (nome)
+    {
       case "coca":
       case "coca-cola":
         nome = "coca-cola";
@@ -29,8 +32,10 @@ public class Bebida {
     this.nome = nome;
   }
 
-  public double getPreco() {
-    switch (nome) {
+  public double getPreco()
+  {
+    switch (nome)
+    {
       case "coca-cola":
       case "pepsi":
       case "fanta":
@@ -44,7 +49,8 @@ public class Bebida {
     }
   }
 
-  public String getNome() {
+  public String getNome()
+  {
     return nome;
   }
 }

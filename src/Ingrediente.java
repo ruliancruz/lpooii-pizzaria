@@ -1,2 +1,3 @@
-public record Ingrediente(String nome, double preco) {
+public record Ingrediente(String nome, double preco)
+{
 }
