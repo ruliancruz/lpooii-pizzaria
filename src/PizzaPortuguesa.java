@@ -10,17 +10,17 @@ public class PizzaPortuguesa extends PizzaAbstrata
         adicionarIngrediente("Pimentão", 7, 0.1);
         adicionarIngrediente("Ovo", 0.3, 2.0);
 
-        switch (tamanho)
+        switch(tamanho)
         {
-          case "P":
-            setPreco(40.0);
-            break;
-          case "M":
-            setPreco(42.0);
-            break;
-          case "G":
-            setPreco(45.0);
-            break;
+            case "P":
+                setPreco(40.0);
+                break;
+            case "M":
+                setPreco(42.0);
+                break;
+            case "G":
+                setPreco(45.0);
+                break;
         }
     }
 }

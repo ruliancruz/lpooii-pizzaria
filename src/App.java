@@ -3,12 +3,13 @@ public class App
     public static void main(String[] args) throws Exception
     {
         Pedido p = null;
-        Registro registro = Registro.getInstancia("registro.txt"); //Singleton
+        Registro registro = Registro.getInstancia("registro.txt");
 
-        menuInicial: while (true)
+        menuInicial: while(true)
         {
             System.out.println("Escolha uma das seguintes opções:");
-            if (p == null)
+
+            if(p == null)
             {
                 System.out.println("1 - Iniciar pedido");
                 System.out.println("2 - Sair");
@@ -18,11 +19,12 @@ public class App
                 System.out.println("1 - Pedir conta");
                 System.out.println("2 - Sair");
             }
+
             // System.console() é a chamada para um objeto que interage com o console/linha
             // de comando
             String entrada = System.console().readLine("Digite o número da opção [1 ou 2]: ");
 
-            switch (entrada)
+            switch(entrada)
             {
                 case "2":
                     break menuInicial;
@@ -45,7 +47,7 @@ public class App
     {
         Pedido p = new Pedido();
 
-        pedido: while (true)
+        pedido: while(true)
         {
             System.out.println("Escolha uma das seguintes opções:");
             System.out.println("1 - Pedir pizza");
@@ -53,7 +55,7 @@ public class App
             System.out.println("3 - Finalizar pedido");
             String entrada = System.console().readLine("Digite o número da opção [1 a 3]: ");
 
-            switch (entrada)
+            switch(entrada)
             {
                 case "1":
                     pedirPizza(p);
@@ -76,7 +78,7 @@ public class App
 
         int i = 0;
 
-        for (Sabor sabor : Sabor.values())
+        for(Sabor sabor : Sabor.values())
             System.out.println(String.format("%d - %s", ++i, sabor.name()));
 
         String entrada = System.console().readLine("Digite o número do sabor [1 a %d]: ", i);
@@ -85,7 +87,7 @@ public class App
         {
             int escolha = Integer.parseInt(entrada);
 
-            if (escolha <= 0 || escolha > i)
+            if(escolha <= 0 || escolha > i)
                 throw new RuntimeException("Sabor inválido");
 
             Sabor sabor = Sabor.values()[escolha - 1];
@@ -96,7 +98,7 @@ public class App
 
             pedido.addPizza(pizza);
         }
-        catch (RuntimeException e)
+        catch(RuntimeException e)
         {
             System.err.println(e.getMessage());
         }
@@ -111,7 +113,7 @@ public class App
             Bebida bebida = BebidaFabrica.criarBebida(entrada.toLowerCase());
             pedido.addBebida(bebida);
         }
-        catch (RuntimeException e)
+        catch(RuntimeException e)
         {
             System.err.println(e.getMessage());
         }

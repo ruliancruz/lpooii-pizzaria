@@ -7,17 +7,17 @@ public class PizzaMilho extends PizzaAbstrata
         adicionarIngredientesBase();
         adicionarIngrediente("Milho", 5, 0.5);
 
-        switch (tamanho)
+        switch(tamanho)
         {
-          case "P":
-            setPreco(25.0);
-            break;
-          case "M":
-            setPreco(27.0);
-            break;
-          case "G":
-            setPreco(30.0);
-            break;
+            case "P":
+                setPreco(25.0);
+                break;
+            case "M":
+                setPreco(27.0);
+                break;
+            case "G":
+                setPreco(30.0);
+                break;
         }
     }
 }

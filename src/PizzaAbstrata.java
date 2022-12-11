@@ -20,7 +20,7 @@ public abstract class PizzaAbstrata implements Pizza
     {
         int raio;
 
-        switch (tamanho)
+        switch(tamanho)
         {
         case "P":
             raio = 20;
@@ -41,15 +41,15 @@ public abstract class PizzaAbstrata implements Pizza
     @Override
     public double custoTotal()
     {
-      double total = 0;
-  
-      for (var entry : ingredientes.entrySet())
-      {
-        Ingrediente i = entry.getKey();
-        total += i.preco() * entry.getValue();
-      }
-  
-      return Math.ceil(total * 100) / 100;
+        double total = 0;
+    
+        for(var entry : ingredientes.entrySet())
+        {
+            Ingrediente i = entry.getKey();
+            total += i.preco() * entry.getValue();
+        }
+    
+        return Math.ceil(total * 100) / 100;
     }  
 
     protected void adicionarIngrediente(String nome, double preco, double quantidade)
