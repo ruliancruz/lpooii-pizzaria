@@ -108,8 +108,7 @@ public class App
 
         try
         {
-            Bebida bebida = new Bebida(entrada.toLowerCase());
-
+            Bebida bebida = BebidaFabrica.criarBebida(entrada.toLowerCase());
             pedido.addBebida(bebida);
         }
         catch (RuntimeException e)

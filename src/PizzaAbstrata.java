@@ -37,7 +37,8 @@ public abstract class PizzaAbstrata implements Pizza
 
         return quantidade * (Math.pow(raio, 2) * Math.PI) / (Math.pow(30, 2) * Math.PI);
     }
-    
+
+    @Override
     public double custoTotal()
     {
       double total = 0;
@@ -56,6 +57,7 @@ public abstract class PizzaAbstrata implements Pizza
         ingredientes.put(new Ingrediente(nome, preco), ajustaQuantidade(quantidade, tamanho));
     }
 
+    @Override
     public String getTamanho()
     {
         return tamanho;
@@ -66,6 +68,7 @@ public abstract class PizzaAbstrata implements Pizza
         this.tamanho = tamanho;
     }
 
+    @Override
     public double getPreco()
     {
         return preco;
@@ -76,6 +79,7 @@ public abstract class PizzaAbstrata implements Pizza
         this.preco = preco;
     }
 
+    @Override
     public Sabor getSabor()
     {
         return sabor;
