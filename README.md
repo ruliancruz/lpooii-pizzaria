@@ -1,6 +1,7 @@
-# lpooii-pizzaria
-Sistema de criação de pedidos de uma pizzaria.
+# lpooii-pizzeria
 
-Projeto em Java para a disciplina de Linguagem de Programação Orientada a Objetos II.
+Order creation system for a pizzaria.
 
-Esta é uma versão do projeto <a href="https://github.com/cirosobral/lpooii-pizzaria">LPOOII Pizzaria</a> com a aplicação de alguns padrões de projeto.
+Project developed in Java for the Object Oriented Programming Language II subject of the Degree in Computing at IFBA - Campus Jacobina.
+
+This is a version of the <a href="https://github.com/cirosobral/lpooii-pizzaria">LPOOII Pizzaria</a> project with the application of some design patterns, like builder and singleton.
